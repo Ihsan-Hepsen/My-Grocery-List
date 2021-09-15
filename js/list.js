@@ -3,7 +3,7 @@ class List {
         this._list = []
     }
 
-    addToCart(item) {
+    addToList(item) {
         if (!this.has(item)) {
             this._list.push(item)
         }

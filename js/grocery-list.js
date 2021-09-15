@@ -1,4 +1,4 @@
-import { List } from "./cart.js";
+import { List } from "./list.js";
 
 const itemToBeAdded = document.getElementById('item_field')
 const groceryList = document.getElementById('grocery_list')
@@ -8,16 +8,13 @@ const myList = new List()
 function addToList(event) {
     event.preventDefault()
     if (itemToBeAdded.value !== '') {
-        myList.addToCart(itemToBeAdded.value)
+        myList.addToList(itemToBeAdded.value)
         itemToBeAdded.value = ''
         displayList()
     }
 }
 
 function removeFromList(event) {
-    console.log(event);
-    // console.log(event.target.parentNode.childNodes[0].innerText);
-    console.log(myList);
     myList.removeFromList(event.target.parentNode.childNodes[0].innerText)
     displayList()
 }
