@@ -70,6 +70,24 @@ main {
     overflow-y: auto;
 }
 
+@media only screen and (max-width: 750px) {
+    .main-container {
+        width: 90%;
+        padding: 1rem;
+        margin: 0 10rem;
+    }
+
+    .adding-box {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 1rem;
+    }
+
+    #add_button {
+        margin: .7rem;
+    }
+}
+
 .list-item:nth-child(2n) {
     background: #ddd;
 }
